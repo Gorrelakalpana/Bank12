@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+    discovery:
+      enabled: true
+  application:
+    name: gateway1
+server:
+  port: 8097
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      instance:
+    preferIpAddress: true
+    hostname: localhost
